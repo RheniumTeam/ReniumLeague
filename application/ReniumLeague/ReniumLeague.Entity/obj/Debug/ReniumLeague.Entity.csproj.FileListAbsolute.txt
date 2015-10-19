@@ -8,3 +8,6 @@ D:\Desktop\Telerik\Databases\ReniumLeague\application\ReniumLeague\ReniumLeague.
 D:\Desktop\Telerik\Databases\ReniumLeague\application\ReniumLeague\ReniumLeague.Entity\obj\Debug\ReniumLeague.Entity.csprojResolveAssemblyReference.cache
 D:\Desktop\Telerik\Databases\ReniumLeague\application\ReniumLeague\ReniumLeague.Entity\obj\Debug\ReniumLeague.Entity.exe
 D:\Desktop\Telerik\Databases\ReniumLeague\application\ReniumLeague\ReniumLeague.Entity\obj\Debug\ReniumLeague.Entity.pdb
+C:\Users\plock\Desktop\Telerik\Databases\ReniumLeague\application\ReniumLeague\ReniumLeague.Entity\bin\Debug\ReniumLeague.Entity.exe.config
+C:\Users\plock\Desktop\Telerik\Databases\ReniumLeague\application\ReniumLeague\ReniumLeague.Entity\obj\Debug\ReniumLeague.Entity.exe
+C:\Users\plock\Desktop\Telerik\Databases\ReniumLeague\application\ReniumLeague\ReniumLeague.Entity\obj\Debug\ReniumLeague.Entity.pdb

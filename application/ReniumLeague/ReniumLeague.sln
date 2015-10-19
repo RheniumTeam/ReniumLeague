@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReniumLeague.Entity", "ReniumLeague.Entity\ReniumLeague.Entity.csproj", "{A298F2CD-8F7D-48D7-B0D2-00690E4939B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReniumLeage.Logic", "ReniumLeage.Logic\ReniumLeage.Logic.csproj", "{403EFA87-B3E3-4C6E-B9D4-A11F8F07B188}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A298F2CD-8F7D-48D7-B0D2-00690E4939B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A298F2CD-8F7D-48D7-B0D2-00690E4939B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A298F2CD-8F7D-48D7-B0D2-00690E4939B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{403EFA87-B3E3-4C6E-B9D4-A11F8F07B188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{403EFA87-B3E3-4C6E-B9D4-A11F8F07B188}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{403EFA87-B3E3-4C6E-B9D4-A11F8F07B188}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{403EFA87-B3E3-4C6E-B9D4-A11F8F07B188}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
