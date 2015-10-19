@@ -1,0 +1,10 @@
+D:\Desktop\Telerik\Databases\ReniumLeague\application\ReniumLeague\ReniumLeague.Entity\bin\Debug\ReniumLeague.Entity.exe.config
+D:\Desktop\Telerik\Databases\ReniumLeague\application\ReniumLeague\ReniumLeague.Entity\bin\Debug\ReniumLeague.Entity.exe
+D:\Desktop\Telerik\Databases\ReniumLeague\application\ReniumLeague\ReniumLeague.Entity\bin\Debug\ReniumLeague.Entity.pdb
+D:\Desktop\Telerik\Databases\ReniumLeague\application\ReniumLeague\ReniumLeague.Entity\bin\Debug\EntityFramework.dll
+D:\Desktop\Telerik\Databases\ReniumLeague\application\ReniumLeague\ReniumLeague.Entity\bin\Debug\EntityFramework.SqlServer.dll
+D:\Desktop\Telerik\Databases\ReniumLeague\application\ReniumLeague\ReniumLeague.Entity\bin\Debug\EntityFramework.xml
+D:\Desktop\Telerik\Databases\ReniumLeague\application\ReniumLeague\ReniumLeague.Entity\bin\Debug\EntityFramework.SqlServer.xml
+D:\Desktop\Telerik\Databases\ReniumLeague\application\ReniumLeague\ReniumLeague.Entity\obj\Debug\ReniumLeague.Entity.csprojResolveAssemblyReference.cache
+D:\Desktop\Telerik\Databases\ReniumLeague\application\ReniumLeague\ReniumLeague.Entity\obj\Debug\ReniumLeague.Entity.exe
+D:\Desktop\Telerik\Databases\ReniumLeague\application\ReniumLeague\ReniumLeague.Entity\obj\Debug\ReniumLeague.Entity.pdb

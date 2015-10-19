@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RheniumSportsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Match">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HomeTeamID" Type="Int32" Nullable="false" />
+    <Property Name="GuestTeamID" Type="Int32" Nullable="false" />
+    <Property Name="HomeTeamGoals" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="GuestTeamGoals" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Attendnce" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RoundID" Type="Int32" Nullable="false" />
+    <Property Name="StadiumID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Round" Relationship="Self.FK_Matches_Rounds" FromRole="Matches" ToRole="Rounds" />
+    <NavigationProperty Name="Team" Relationship="Self.FK_Matches_Teams" FromRole="Matches" ToRole="Teams" />
+    <NavigationProperty Name="Team1" Relationship="Self.FK_Matches_Teams1" FromRole="Matches" ToRole="Teams" />
+    <NavigationProperty Name="MatchesStadiums" Relationship="Self.FK_MatchesStadiums_Matches" FromRole="Matches" ToRole="MatchesStadiums" />
+  </EntityType>
+  <EntityType Name="MatchesStadium">
+    <Key>
+      <PropertyRef Name="MatchID" />
+      <PropertyRef Name="StadiumID" />
+    </Key>
+    <Property Name="MatchID" Type="Int32" Nullable="false" />
+    <Property Name="StadiumID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Match" Relationship="Self.FK_MatchesStadiums_Matches" FromRole="MatchesStadiums" ToRole="Matches" />
+    <NavigationProperty Name="Stadium" Relationship="Self.FK_MatchesStadiums_Stadiums" FromRole="MatchesStadiums" ToRole="Stadiums" />
+  </EntityType>
+  <EntityType Name="Round">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SeasoneID" Type="Int32" Nullable="false" />
+    <Property Name="Number" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Matches" Relationship="Self.FK_Matches_Rounds" FromRole="Rounds" ToRole="Matches" />
+    <NavigationProperty Name="Seasone" Relationship="Self.FK_Rounds_Seasones" FromRole="Rounds" ToRole="Seasones" />
+  </EntityType>
+  <EntityType Name="Seasone">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Rounds" Relationship="Self.FK_Rounds_Seasones" FromRole="Seasones" ToRole="Rounds" />
+  </EntityType>
+  <EntityType Name="Stadium">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Capacity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="MatchesStadiums" Relationship="Self.FK_MatchesStadiums_Stadiums" FromRole="Stadiums" ToRole="MatchesStadiums" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Matches" Relationship="Self.FK_Matches_Teams" FromRole="Teams" ToRole="Matches" />
+    <NavigationProperty Name="Matches1" Relationship="Self.FK_Matches_Teams1" FromRole="Teams" ToRole="Matches" />
+  </EntityType>
+  <Association Name="FK_Matches_Rounds">
+    <End Role="Rounds" Type="Self.Round" Multiplicity="1" />
+    <End Role="Matches" Type="Self.Match" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rounds">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Matches">
+        <PropertyRef Name="RoundID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Matches_Teams">
+    <End Role="Teams" Type="Self.Team" Multiplicity="1" />
+    <End Role="Matches" Type="Self.Match" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teams">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Matches">
+        <PropertyRef Name="HomeTeamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Matches_Teams1">
+    <End Role="Teams" Type="Self.Team" Multiplicity="1" />
+    <End Role="Matches" Type="Self.Match" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teams">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Matches">
+        <PropertyRef Name="GuestTeamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MatchesStadiums_Matches">
+    <End Role="Matches" Type="Self.Match" Multiplicity="1" />
+    <End Role="MatchesStadiums" Type="Self.MatchesStadium" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Matches">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="MatchesStadiums">
+        <PropertyRef Name="MatchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MatchesStadiums_Stadiums">
+    <End Role="Stadiums" Type="Self.Stadium" Multiplicity="1" />
+    <End Role="MatchesStadiums" Type="Self.MatchesStadium" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stadiums">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="MatchesStadiums">
+        <PropertyRef Name="MatchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rounds_Seasones">
+    <End Role="Seasones" Type="Self.Seasone" Multiplicity="1" />
+    <End Role="Rounds" Type="Self.Round" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Seasones">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Rounds">
+        <PropertyRef Name="SeasoneID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RheniumSportsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Matches" EntityType="Self.Match" />
+    <EntitySet Name="MatchesStadiums" EntityType="Self.MatchesStadium" />
+    <EntitySet Name="Rounds" EntityType="Self.Round" />
+    <EntitySet Name="Seasones" EntityType="Self.Seasone" />
+    <EntitySet Name="Stadiums" EntityType="Self.Stadium" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Teams" EntityType="Self.Team" />
+    <AssociationSet Name="FK_Matches_Rounds" Association="Self.FK_Matches_Rounds">
+      <End Role="Rounds" EntitySet="Rounds" />
+      <End Role="Matches" EntitySet="Matches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Matches_Teams" Association="Self.FK_Matches_Teams">
+      <End Role="Teams" EntitySet="Teams" />
+      <End Role="Matches" EntitySet="Matches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Matches_Teams1" Association="Self.FK_Matches_Teams1">
+      <End Role="Teams" EntitySet="Teams" />
+      <End Role="Matches" EntitySet="Matches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MatchesStadiums_Matches" Association="Self.FK_MatchesStadiums_Matches">
+      <End Role="Matches" EntitySet="Matches" />
+      <End Role="MatchesStadiums" EntitySet="MatchesStadiums" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MatchesStadiums_Stadiums" Association="Self.FK_MatchesStadiums_Stadiums">
+      <End Role="Stadiums" EntitySet="Stadiums" />
+      <End Role="MatchesStadiums" EntitySet="MatchesStadiums" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rounds_Seasones" Association="Self.FK_Rounds_Seasones">
+      <End Role="Seasones" EntitySet="Seasones" />
+      <End Role="Rounds" EntitySet="Rounds" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
