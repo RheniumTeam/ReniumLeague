@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReniumLeague.Entity", "Reni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReniumLeage.Logic", "ReniumLeage.Logic\ReniumLeage.Logic.csproj", "{403EFA87-B3E3-4C6E-B9D4-A11F8F07B188}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReniumLeage.UI", "ReniumLeage.UI\ReniumLeage.UI.csproj", "{1E0B5833-FDB3-4750-9588-21B89E30F299}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{403EFA87-B3E3-4C6E-B9D4-A11F8F07B188}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{403EFA87-B3E3-4C6E-B9D4-A11F8F07B188}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{403EFA87-B3E3-4C6E-B9D4-A11F8F07B188}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1E0B5833-FDB3-4750-9588-21B89E30F299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E0B5833-FDB3-4750-9588-21B89E30F299}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1E0B5833-FDB3-4750-9588-21B89E30F299}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1E0B5833-FDB3-4750-9588-21B89E30F299}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
