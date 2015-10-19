@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace ReniumLeague.Entity
 {
-    public class StartUp
+    class StartUp
     {
-        static void Main(string[] args)
-        {
-            using (var db = new RheniumSportsEntities())
-            {
-                Console.WriteLine(db.Matches.FirstOrDefault());
-            }
-        }
+        static void Main() { }
     }
 }
