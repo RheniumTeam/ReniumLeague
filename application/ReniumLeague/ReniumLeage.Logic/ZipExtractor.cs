@@ -2,9 +2,9 @@
 {
     using Ionic.Zip;
 
-    public class ZipReader
+    public class ZipExtractor
     {
-        public ZipReader(string zipFilePath, ExtractExistingFileAction extractionStratedy = ExtractExistingFileAction.OverwriteSilently)
+        public ZipExtractor(string zipFilePath, ExtractExistingFileAction extractionStratedy = ExtractExistingFileAction.OverwriteSilently)
         {
             this.Path = zipFilePath;
             this.ExtractionStrategy = extractionStratedy;

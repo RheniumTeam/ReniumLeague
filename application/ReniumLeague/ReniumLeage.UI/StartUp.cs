@@ -8,7 +8,7 @@
     {
         static void Main(string[] args)
         {
-            ZipReader zipReader = new ZipReader("../../../../../Matches - Results.zip");
+            ZipExtractor zipReader = new ZipExtractor("../../../../../Matches - Results.zip");
 
             zipReader.Extract("../../../../../");
         }
