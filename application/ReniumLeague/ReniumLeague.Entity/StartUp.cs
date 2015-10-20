@@ -1,10 +1,12 @@
-﻿namespace ReniumLeague.Entity
+﻿using PdfReportExporter;
+
+namespace ReniumLeague.Entity
 {
     using System;
     using System.Data.SqlClient;
     using System.Drawing;
     using System.Linq;
-    using PdfReportExporter;
+   // using PdfReportExporter;
 
     public class StartUp
     {
@@ -12,6 +14,9 @@
         {
             using (var db = new RheniumSportsEntities())
             {
+                var match = new Match();
+                match.Attendnce = 0;
+                db.Matches.Add(match);
                 Console.WriteLine(db.Matches.FirstOrDefault());
             }
 

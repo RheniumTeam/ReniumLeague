@@ -1,11 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReniumLeague.Entity", "ReniumLeague.Entity\ReniumLeague.Entity.csproj", "{A298F2CD-8F7D-48D7-B0D2-00690E4939B2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReniumLeage.Logic", "ReniumLeage.Logic\ReniumLeage.Logic.csproj", "{403EFA87-B3E3-4C6E-B9D4-A11F8F07B188}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RheniumLeague.Models", "RheniumLeague.Models\RheniumLeague.Models.csproj", "{80823E95-747B-4851-97F2-0A8911D2E74D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rhenium.Client", "Rhenium.Client\Rhenium.Client.csproj", "{6BF5CCAA-4A76-4EC9-93E6-8A51145343DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MSSql", "MSSql", "{ADA0E8A0-1AAA-438C-BFBF-64EEADA5567E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSql.Data", "MSSqul.Data\MSSql.Data.csproj", "{D34098E9-50B2-4CFA-81B3-C488F0219138}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{002B4EA1-1909-464F-B1C6-CB52786CFE9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RheniumLeague.DtoModels", "RheniumLeague.DtoModels\RheniumLeague.DtoModels.csproj", "{9A5C5660-845A-4804-B627-58EB2E1C3DF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +33,31 @@ Global
 		{403EFA87-B3E3-4C6E-B9D4-A11F8F07B188}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{403EFA87-B3E3-4C6E-B9D4-A11F8F07B188}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{403EFA87-B3E3-4C6E-B9D4-A11F8F07B188}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80823E95-747B-4851-97F2-0A8911D2E74D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80823E95-747B-4851-97F2-0A8911D2E74D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80823E95-747B-4851-97F2-0A8911D2E74D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80823E95-747B-4851-97F2-0A8911D2E74D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BF5CCAA-4A76-4EC9-93E6-8A51145343DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BF5CCAA-4A76-4EC9-93E6-8A51145343DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BF5CCAA-4A76-4EC9-93E6-8A51145343DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BF5CCAA-4A76-4EC9-93E6-8A51145343DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D34098E9-50B2-4CFA-81B3-C488F0219138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D34098E9-50B2-4CFA-81B3-C488F0219138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D34098E9-50B2-4CFA-81B3-C488F0219138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D34098E9-50B2-4CFA-81B3-C488F0219138}.Release|Any CPU.Build.0 = Release|Any CPU
+		{002B4EA1-1909-464F-B1C6-CB52786CFE9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{002B4EA1-1909-464F-B1C6-CB52786CFE9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{002B4EA1-1909-464F-B1C6-CB52786CFE9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{002B4EA1-1909-464F-B1C6-CB52786CFE9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A5C5660-845A-4804-B627-58EB2E1C3DF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A5C5660-845A-4804-B627-58EB2E1C3DF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A5C5660-845A-4804-B627-58EB2E1C3DF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A5C5660-845A-4804-B627-58EB2E1C3DF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D34098E9-50B2-4CFA-81B3-C488F0219138} = {ADA0E8A0-1AAA-438C-BFBF-64EEADA5567E}
 	EndGlobalSection
 EndGlobal
